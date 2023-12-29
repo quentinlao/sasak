@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../themes/colors/default.css";
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* globals.css */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+html {
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  position: relative;
+  width: 100%;
+
+  background: white;
+}
+
+@font-face {
+  font-family: "NunitoRegular";
+  src: url("../assets/fonts/nunito-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NunitoBold";
+  src: url("../assets/fonts/nunito-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../assets/fonts/roboto-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoBold";
+  src: url("../assets/fonts/roboto-bold.ttf") format("truetype");
+}
