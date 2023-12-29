@@ -1,14 +1,12 @@
 "use client";
 
-import React from "react";
 import classNames from "classnames";
+import React from "react";
 import { Link } from "react-scroll";
 import useScrollNavigation from "../common/utils/hooks/useScrollNavigation";
-import { CalixteLaoData, fetcher } from "@/app/utils/utils";
-import useSWR from "swr";
 
 export const Navigation = () => {
-  const  navigation  = [
+  const navigation = [
     {
       href: "/#home",
       name: "Home",
@@ -150,7 +148,7 @@ export const Navigation = () => {
           })}
 
           <a
-            href='mailto:calixtelao@outlook.com'
+            href='mailto:quentinlao@outlook.com'
             className='relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold  rounded-full  bg-[#F28705] hover:bg-active-400 group'
           >
             <span className='absolute right-16 pr-4 '>

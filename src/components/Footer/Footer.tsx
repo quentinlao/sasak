@@ -1,9 +1,6 @@
 "use client";
-import { CalixteLaoData, fetcher } from "@/app/utils/utils";
 import packageInfo from "../../../package.json";
-import useSWR from "swr";
 import { Section } from "../common/Section/Section";
-import { Title } from "../common/Title/Title";
 
 export const Footer = () => {
   return (
