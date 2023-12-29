@@ -1,12 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { useSpring, animated } from "@react-spring/web";
+import { animated, useSpring } from "@react-spring/web";
 import { useScroll } from "@use-gesture/react";
-import { Section } from "../../common/Section/Section";
+import Image from "next/image";
+import React, { use, useEffect, useState } from "react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Tilt } from "react-tilt";
-import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
-import { Footer } from "../../Footer/Footer";
+import { Section } from "../../common/Section/Section";
 
 const HeaderDescription = () => {
   return (
@@ -27,15 +26,18 @@ const HeaderDescription = () => {
   );
 };
 
+function useSafeScroll(handler: (state: { xy: [number, number] }) => void, options?: Partial<{ target: EventTarget }>) {
+  if (typeof window !== "undefined") {
+    return useScroll(handler, { target: window });
+  }
+}
+
 const HeaderImage = () => {
   const [{ y }, set] = useSpring(() => ({ y: 0 }));
 
-  useScroll(
-    ({ xy: [, y] }) => {
-      set({ y });
-    },
-    { target: window }
-  );
+  useSafeScroll(({ xy: [, y] }) => {
+    set({ y });
+  });
 
   const trans1 = (y: number) => `translate3d(0, ${y / 6}px, 0)`;
   const trans2 = (y: number) => `translate3d(0, ${-y / 8}px, 0)`;
@@ -290,12 +292,9 @@ const Card = ({ className, children, color = "#F1FFF3" }: CardProps) => {
 const Services = () => {
   const [{ y }, set] = useSpring(() => ({ y: 0 }));
 
-  useScroll(
-    ({ xy: [, y] }) => {
-      set({ y });
-    },
-    { target: window }
-  );
+  useSafeScroll(({ xy: [, y] }) => {
+    set({ y });
+  });
 
   const trans1 = (y: number) => `translate3d(0, ${y / 9}px, 0)`;
   const trans2 = (y: number) => `translate3d(0, ${y / 14}px, 0)`;
@@ -479,12 +478,9 @@ const Experiences = () => {
 const Canal: React.FC = () => {
   const [{ y }, set] = useSpring(() => ({ y: 0 }));
 
-  useScroll(
-    ({ xy: [, y] }) => {
-      set({ y });
-    },
-    { target: window }
-  );
+  useSafeScroll(({ xy: [, y] }) => {
+    set({ y });
+  });
 
   const trans1 = (y: number) => `translate3d(${y / 30}px, 0, 0)`;
   const trans2 = (y: number) => `translate3d(-${y / 50}px, 0, 0)`;
@@ -575,12 +571,9 @@ const Ans: React.FC = () => {
 const Thales: React.FC = () => {
   const [{ y }, set] = useSpring(() => ({ y: 0 }));
 
-  useScroll(
-    ({ xy: [, y] }) => {
-      set({ y });
-    },
-    { target: window }
-  );
+  useSafeScroll(({ xy: [, y] }) => {
+    set({ y });
+  });
 
   const trans1 = (y: number) => `translate3d(${y / 30}px, 0, 0)`;
   const trans2 = (y: number) => `translate3d(-${y / 50}px, 0, 0)`;
@@ -686,19 +679,13 @@ const Projects = () => {
   );
 };
 // Function to shuffle an array
-function shuffleArray(array) {
+function shuffleArray(array: string[]) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
 }
-
-// Array of margins
-const margins = [10, 20]; // Adjust as needed
-
-// Shuffle the margins
-const shuffledMargins = shuffleArray(margins);
 
 const Hobbies = () => {
   const images = [
@@ -714,12 +701,8 @@ const Hobbies = () => {
   return (
     <div className='h-[450px]'>
       <div className='absolute w-full z-0 grid grid-cols-3 gap-9 '>
-        {shuffleArray(images).map((image, index) => (
-          <div
-            key={index}
-            className='relative h-[200px]'
-            style={{ marginTop: index % 2 !== 0 ? `${shuffledMargins[index % shuffledMargins.length]}px` : "0px" }}
-          >
+        {shuffleArray(images).map((image: string, index: number) => (
+          <div key={index} className='relative h-[200px]' style={{ marginTop: index % 2 !== 0 ? "10px" : "0px" }}>
             <Image
               className='rounded-md'
               src={image}

@@ -10,6 +10,7 @@ export const metadata = {
   openGraph: {
     title: "Quentin LAO",
   },
+  metadataBase: "http://sasak.vercel.app", // Add this line
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
