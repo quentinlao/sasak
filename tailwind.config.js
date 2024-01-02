@@ -31,23 +31,24 @@ module.exports = {
         "primary--hover": "rgb(var(--color-primary--hover))",
         "primary--pressed": "rgb(var(--color-primary--pressed))",
         "primary--disabled": "rgb(var(--color-primary) / .5)",
-        "primary--fg": "rgb(var(--color-primary--foreground))",
 
         secondary: "rgb(var(--color-secondary))",
         "secondary--hover": "rgb(var(--color-secondary--hover))",
         "secondary--pressed": "rgb(var(--color-secondary--pressed))",
         "secondary--disabled": "rgb(var(--color-secondary) / .5)",
-        "secondary--fg": "rgb(var(--color-secondary--foreground))",
-
-        active: "#FF4858",
-        "active-400": "#FF7480",
 
         default: "rgb(var(--color-default))",
         "default--hover": "rgb(var(--color-default--hover))",
         "default--pressed": "rgb(var(--color-default--pressed))",
         "default--disabled": "rgb(var(--color-default) / .5)",
-        "default--fg": "rgb(var(--color-default--foreground))",
 
+        "light-bg-orange": "rgb(var(--color-light-bg-orange))",
+        "light-bg-green": "rgb(var(--color-light-bg-green))",
+        "dark-green": "rgb(var(--color-dark-green))",
+        "dark-blue": "rgb(var(--color-dark-blue))",
+
+        "soft-light": "rgb(var(--color-soft-light))",
+        
         // Text
         op10: "rgb(var(--color-text) / .1)",
         op30: "rgb(var(--color-text) / .3)",

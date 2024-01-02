@@ -1,16 +1,27 @@
 :root {
-  --color-primary: 5 101 185;
-  --color-primary--hover: 5 101 185 / 0.8;
-  --color-primary--pressed: 5 101 185 / 0.5;
-  --color-primary--foreground: 149 205 255 / 0.5;
+  --color-primary: 242 135 5;
+  --color-primary--hover: 242 135 5 / 0.8;
+  --color-primary--pressed: 242 135 5 / 0.5;
 
-  --color-secondary: 0 0 0;
-  --color-secondary--hover: 0 0 0 / 0.8;
-  --color-secondary--pressed: 0 0 0 / 0.5;
-  --color-secondary--foreground: 0 0 0 / 0.5;
+  --color-secondary: 29 33 48;
+  --color-secondary--hover: 29 33 48 / 0.8;
+  --color-secondary--pressed: 29 33 48 / 0.5;
 
-  --color-default: 13 27 42;
-  --color-default--hover: 13 27 42 / 0.8;
-  --color-default--pressed: 13 27 42 / 0.5;
-  --color-default--foreground: 119 141 169/ 0.5;
+  --color-tertiary: 61 115 66;
+  --color-tertiary--hover: 61 115 66 / 0.8;
+  --color-tertiary--pressed: 61 115 66 / 0.5;
+
+  --color-default: 29 33 48;
+  --color-default--hover: 29 33 48 / 0.8;
+  --color-default--pressed: 29 33 48 / 0.5;
+
+  --color-text: 29 33 48;
+
+  --color-light-bg-orange: 255 244 232;
+  --color-light-bg-green: 238 255 239;
+
+  --color-dark-green: 29 141 34;
+  --color-dark-blue: 1 32 48;
+
+  --color-soft-light: 250 250 250;
 }

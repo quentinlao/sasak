@@ -83,7 +83,7 @@ export const Navigation = () => {
               })}
 
               <a
-                href='mailto:calixte.lao@outlook.com'
+                href='mailto:quentinlao@outlook.com'
                 className='mt-8 relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold  rounded-full  bg-active hover:bg-active-400 group'
               >
                 <span className='absolute right-16 pr-4 '>
@@ -149,7 +149,7 @@ export const Navigation = () => {
 
           <a
             href='mailto:quentinlao@outlook.com'
-            className='relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold  rounded-full  bg-[#F28705] hover:bg-active-400 group'
+            className='relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold  rounded-full  bg-primary hover:bg-primary--hover group'
           >
             <span className='absolute right-16 pr-4 '>
               <svg
