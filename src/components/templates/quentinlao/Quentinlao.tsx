@@ -7,6 +7,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Tilt } from "react-tilt";
 import { Section } from "../../common/Section/Section";
 import { HeaderDescription } from "../Header/HeaderDescription/HeaderDescription";
+import classNames from "classnames";
 
 function useSafeScroll(handler: (state: { xy: [number, number] }) => void, options?: Partial<{ target: EventTarget }>) {
   if (typeof window !== "undefined") {
@@ -250,11 +251,12 @@ type TitleProps = {
   description?: string;
   color?: string;
   centered?: boolean;
+  className?: string;
 };
 
-const Title = ({ title, subTitle, description, color = "text-black", centered = false }: TitleProps) => {
+const Title = ({ className, title, subTitle, description, color = "text-black", centered = false }: TitleProps) => {
   return (
-    <div className={`${centered ? "text-center" : ""}`}>
+    <div className={classNames(className, `${centered ? "text-center" : ""}`)}>
       <p className='text-16 font-nunitoRegular uppercase text-primary'>{subTitle}</p>
       <p className={`text-32 font-nunitoBold ${color}`}>{title}</p>
       <p className={`text-18 font-nunitoRegular ${color}`}>{description}</p>
@@ -372,11 +374,29 @@ const Services = () => {
 
 const Experiences = () => {
   return (
-    <div className='bg-white w-full mb-[50px]'>
+    <div className='bg-white w-full relative mb-[50px]'>
+      <svg
+        className='absolute h-full w-full z-0'
+        viewBox='0 0'
+        xmlns='http://www.w3.org/2000/svg'
+        preserveAspectRatio='none'
+      >
+        <rect className='bg' id='bg' x='0' y='0' fill='#ffffff'></rect>
+        <defs>
+          <filter id='f1' x='-200%' y='-200%' width='500%' height='500%'>
+            <feGaussianBlur stdDeviation='116'></feGaussianBlur>
+          </filter>
+        </defs>
+        <circle cx='1351.5770662944956' cy='349.7150343665737' r='675.84' fill='#E2F1E3' filter='url(#f1)'></circle>
+        <circle cx='873.4364929198144' cy='984.2290062700579' r='675.84' fill='#FFF1E4' filter='url(#f1)'></circle>
+        <circle cx='122.22428238772773' cy='725.565898743491' r='675.84' fill='#FFFFFF' filter='url(#f1)'></circle>
+        <circle cx='136.09017688963763' cy='-68.81066524708035' r='675.84' fill='#FAFFFB' filter='url(#f1)'></circle>
+        <circle cx='895.8719815083246' cy='-301.09927413304234' r='675.84' fill='#FFFFFF' filter='url(#f1)'></circle>
+      </svg>
       <Section id='experiences'>
-        <Title title='Professionnelles' subTitle='experiences' />
+        <Title className="mt-32" title='Professionnelles' subTitle='experiences' />
         <ul role='list'>
-          <li className='mt-5 md:mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16 transition-all rounded-md opacity-80 hover:opacity-100 group-hover/list:opacity-100 hover:bg-[#f7f7f7] hover:shadow-md hover:shadow-[#F0F0F0]'>
+          <li className='mt-5 md:mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16  hover:bg-white hover:bg-opacity-15  hover:shadow-sm md:hover:backdrop-blur-[18px]  hover:rounded-lg'>
             <div className='md:w-[250px]'>
               <p className='text-16 uppercase font-nunitoRegular mb-4'>sept. 2022 - aujourd’hui</p>
             </div>
@@ -414,7 +434,7 @@ const Experiences = () => {
               </div>
             </div>
           </li>
-          <li className='mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16 transition-all rounded-md opacity-80 hover:opacity-100 group-hover/list:opacity-100 hover:bg-[#f7f7f7] hover:shadow-md hover:shadow-[#F0F0F0]'>
+          <li className='mt-5 md:mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16  hover:bg-white hover:bg-opacity-15  hover:shadow-sm md:hover:backdrop-blur-[18px]  hover:rounded-lg'>
             <div className='md:w-[250px]'>
               <p className='text-16 uppercase font-nunitoRegular mb-4'>dec. 2020 - sept. 2022</p>
             </div>
@@ -450,7 +470,7 @@ const Experiences = () => {
               </div>
             </div>
           </li>
-          <li className='mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16 transition-all rounded-md opacity-80 hover:opacity-100 group-hover/list:opacity-100 hover:bg-[#f7f7f7] hover:shadow-md hover:shadow-[#F0F0F0]'>
+          <li className='mt-5 md:mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16  hover:bg-white hover:bg-opacity-15  hover:shadow-sm md:hover:backdrop-blur-[18px]  hover:rounded-lg'>
             <div className='md:w-[250px]'>
               <p className='text-16 uppercase font-nunitoRegular mb-4'>janv. 2020 - nov. 2020</p>
             </div>
@@ -490,7 +510,7 @@ const Experiences = () => {
               </div>
             </div>
           </li>
-          <li className='mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16 transition-all rounded-md opacity-80 hover:opacity-100 group-hover/list:opacity-100 hover:bg-[#f7f7f7] hover:shadow-md hover:shadow-[#F0F0F0]'>
+          <li className='mt-5 md:mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16  hover:bg-white hover:bg-opacity-15  hover:shadow-sm md:hover:backdrop-blur-[18px]  hover:rounded-lg'>
             <div className='md:w-[250px]'>
               <p className='text-16 uppercase font-nunitoRegular mb-4'>nov. 2018 - janv. 2020</p>
             </div>
@@ -743,7 +763,7 @@ const Projects = () => {
   return (
     <div className='bg-soft-light w-full '>
       <Section id='projects'>
-        <Title title='Mes travaux délivrés' subTitle='Portfolio' />
+        <Title className="mt-32" title='Mes travaux délivrés' subTitle='Portfolio' />
         <Canal />
         <Thales />
         <Ans />
