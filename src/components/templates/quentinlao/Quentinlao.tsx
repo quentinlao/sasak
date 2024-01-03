@@ -57,7 +57,7 @@ const HeaderImage = () => {
           transform: y.interpolate(trans2),
         }}
         className='mt-[450px] ml-[-30px] z-2 absolute w-16 h-16 flex-shrink-0 rounded-full bg-primary'
-      ></animated.div>{" "}
+      ></animated.div>
       <Image
         className='w-[340px] h-[510px] object-cover rounded-[6.25rem]'
         src='/img/quentinlao-hero.jpeg'
@@ -376,7 +376,7 @@ const Experiences = () => {
       <Section id='experiences'>
         <Title title='Professionnelles' subTitle='experiences' />
         <ul role='list'>
-          <li className='mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16 transition-all rounded-md opacity-80 hover:opacity-100 group-hover/list:opacity-100 hover:bg-[#f7f7f7] hover:shadow-md hover:shadow-[#F0F0F0]'>
+          <li className='mt-5 md:mt-20 flex flex-col md:flex-row items-start md:space-x-20 p-16 transition-all rounded-md opacity-80 hover:opacity-100 group-hover/list:opacity-100 hover:bg-[#f7f7f7] hover:shadow-md hover:shadow-[#F0F0F0]'>
             <div className='md:w-[250px]'>
               <p className='text-16 uppercase font-nunitoRegular mb-4'>sept. 2022 - aujourd’hui</p>
             </div>
@@ -530,7 +530,6 @@ const Experiences = () => {
         </ul>
         <div className='flex space-x-8 text-18 font-nunitoBold mt-10'>
           <p>
-            {" "}
             <a href='https://www.linkedin.com/in/quentinlao/' target='_blank'>
               Voir mes expériences complètes
             </a>
@@ -728,7 +727,7 @@ const Mymenuplan = () => {
         <p className='text-17 font-nunitoRegular mt-10'>
           MyMenuPlan est une application mobile qui accompagne l’utilisateur en lui planifiant des menus hebdomadaires.
           Tout en lui proposant à la fois la liste des courses de la semaine et les informations nutritionnelles à
-          travers une note sur la qualité nutritive de la recette{" "}
+          travers une note sur la qualité nutritive de la recette
         </p>
         <button className='bg-primary text-white font-nunitoRegular w-[150px] h-[50px] p-4 rounded-2xl mt-10'>
           <a href='https://www.youtube.com/watch?v=Efe9KJSVNNI&ab_channel=FlutterChallenger' target='_blank'>
@@ -792,7 +791,7 @@ const Hobbies = () => {
           description='Je suis un passionné de nouvelles technologies et de développement web. Je fais des photos et découvre de nouveaux endroits. Je suis également un grand fan de mangas et de jeux vidéo.'
           centered
         />
-        <div className='flex flex-col space-y-4 md:flex-row md:space-x-4 justify-center  mt-10'>
+        <div className='flex flex-col space-y-4 md:flex-row md:space-x-4 justify-center gap-8 mt-10'>
           <a
             className='flex items-center gap-4'
             href='https://www.instagram.com/_sasak/'
