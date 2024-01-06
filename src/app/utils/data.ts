@@ -128,7 +128,10 @@ export const data = {
     ],
     cta: { onClick: "https://www.linkedin.com/in/quentinlao/", label: "Voir mes expériences complètes" },
   },
-  projects: {},
+  projects: {
+    title: "Mes travaux délivrés",
+    subtitle: "Portfolio",
+  },
   hobbies: {
     title: "Mes hobbies",
     subtitle: "A propos de moi",
