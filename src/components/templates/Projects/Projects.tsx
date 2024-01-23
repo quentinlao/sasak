@@ -85,7 +85,7 @@ const Ans = () => {
           />
         </div>
       </Tilt>
-      <div className='md:ml-[100px]'>
+      <div className='md:ml-[130px]'>
         <Title title='IRIS' subTitle='Agence Du Numérique En Santé' />
         <p className='text-17 font-nunitoRegular mt-10'>
           Depuis 2019, le ministère chargé de la Santé porte une stratégie nationale du numérique en santé. Elle a pour
@@ -187,7 +187,7 @@ const Mymenuplan = () => {
           />
         </div>
       </Tilt>
-      <div className='md:ml-[100px]'>
+      <div className='md:ml-[130px]'>
         <Title title='MyMenuPlan' subTitle='MyMenuPlan' />
         <p className='text-17 font-nunitoRegular mt-10'>
           MyMenuPlan est une application mobile qui accompagne l’utilisateur en lui planifiant des menus hebdomadaires.

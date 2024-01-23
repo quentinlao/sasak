@@ -45,7 +45,11 @@ export const Experiences = ({ experiences }: ExperiencesProps) => {
                 <p className='text-20 font-nunitoBold mb-4'>{job.title}</p>
                 <p className={`text-18 font-nunitoRegular ${!job.subtitleBis && `mb-10`}`}>{job.subtitle}</p>
                 {job.subtitleBis && <p className='text-18 font-nunitoRegular mb-10'>{job.subtitleBis}</p>}
-                <p className='text-18 font-nunitoRegular mb-4'>{job.description}</p>
+                <div
+                  className='text-18 font-nunitoRegular mb-4'
+                  dangerouslySetInnerHTML={{ __html: job.description }}
+                />
+
                 <div className='space-x-8 space-y-4'>
                   {job.techs.map((tech, techIndex) => (
                     <button

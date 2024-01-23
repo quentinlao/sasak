@@ -31,7 +31,9 @@ export const Title = ({
     <div className={classNames(className, `${centered ? "text-center" : ""}`)}>
       <p className='text-16 font-nunitoRegular uppercase text-primary'>{subTitle}</p>
       <p className={`text-32 font-nunitoBold ${color}`}>{title}</p>
-      <p className={`text-18 font-nunitoRegular ${color}`}>{description}</p>
+      {description && (
+        <div className={`text-18 font-nunitoRegular ${color}`} dangerouslySetInnerHTML={{ __html: description }} />
+      )}
     </div>
   );
 };

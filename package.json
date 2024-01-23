@@ -1,6 +1,6 @@
 {
   "name": "quentinlao",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -24,11 +24,11 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/react-scroll": "^1.8.7",
     "@react-spring/web": "^9.7.3",
     "@types/node": "20.1.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "@types/react-scroll": "^1.8.7",
     "@use-gesture/react": "^10.3.0"
   },
   "engines": {
